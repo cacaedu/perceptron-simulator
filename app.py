@@ -97,7 +97,7 @@ with col2:
             xytext=(x, y),
             arrowprops=dict(facecolor='blue', shrink=0.2, width=1)
         )
-        ax.text(x - 0.05, y, label, ha='right', va='center')
+        ax.text(x - 0.025, y, label, ha='right', va='center')
     
     # limites e limpeza
     ax.set_xlim(0, 1)
