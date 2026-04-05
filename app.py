@@ -108,7 +108,7 @@ with col2:
         )
         
         # mostrar label e peso
-        ax.text(x, y + 0.5, f"{label} ({peso:.1f})", ha='right', va='center', fontsize=10)
+        ax.text(x + 0.5, y + 0.03, f"{label} ({peso:.1f})", ha='right', va='center', fontsize=10)
     
     # limites e limpeza
     ax.set_xlim(0, 1)
