@@ -91,13 +91,24 @@ with col2:
     
     # desenhar linhas (setas simplificadas)
     for label, (x, y) in entradas.items():
+        # selecionar peso correspondente
+        if label == "bom":
+            peso = peso_bom
+        elif label == "ruim":
+            peso = peso_ruim
+        else:
+            peso = peso_neutro
+        
+        # desenhar seta
         ax.annotate(
             "", 
-            xy=(0.5, 0.5), 
+            xy=(0.58, 0.5), 
             xytext=(x, y),
             arrowprops=dict(facecolor='blue', shrink=0.2, width=1)
         )
-        ax.text(x, y, label, ha='right', va='center')
+        
+        # mostrar label e peso
+        ax.text(x, y + 0.03, f"{label} ({peso:.1f})", ha='right', va='center', fontsize=10)
     
     # limites e limpeza
     ax.set_xlim(0, 1)
