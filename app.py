@@ -76,11 +76,11 @@ with col2:
     fig, ax = plt.subplots()
     
     # desenhar círculo (neurônio)
-    circulo = plt.Circle((0.65, 0.5), 0.1, fill=False)
+    circulo = plt.Circle((0.63, 0.5), 0.1, fill=False)
     ax.add_patch(circulo)
     
     # símbolo Σ
-    ax.text(0.65, 0.5, "Σ", ha='center', va='center', fontsize=16)
+    ax.text(0.63, 0.5, "Σ", ha='center', va='center', fontsize=16)
 
     # coordenadas das entradas
     entradas = {
