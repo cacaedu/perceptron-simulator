@@ -88,3 +88,22 @@ with col2:
     ax.axis('off')
     
     st.pyplot(fig)
+
+    # coordenadas das entradas
+    entradas = {
+        "bom": (0.2, 0.7),
+        "ruim": (0.2, 0.5),
+        "neutro": (0.2, 0.3)
+    }
+    
+    # desenhar linhas (setas simplificadas)
+    for label, (x, y) in entradas.items():
+        ax.annotate(
+            "", 
+            xy=(0.5, 0.5), 
+            xytext=(x, y),
+            arrowprops=dict(facecolor='blue', shrink=0.05, width=2)
+        )
+        ax.text(x - 0.05, y, label, ha='right', va='center')
+    
+    st.pyplot(fig)
