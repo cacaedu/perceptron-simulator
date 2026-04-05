@@ -39,6 +39,15 @@ st.subheader("Soma ponderada")
 
 st.write(soma)
 
+import math
+
+# --- FUNÇÃO SIGMOID ---
+saida = 1 / (1 + math.exp(-soma))
+
+st.subheader("Saída (sigmoid)")
+
+st.write(saida)
+
 st.write("Estado atual:")
 st.write({
     "inputs": {
