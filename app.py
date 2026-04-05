@@ -76,7 +76,7 @@ with col2:
     fig, ax = plt.subplots()
     
     # desenhar círculo (neurônio)
-    dy = -0.1  # ajuste vertical
+    dy = -1  # ajuste vertical
 
     # círculo
     circulo = plt.Circle((0.63, 0.5 + dy), 0.1, fill=False)
