@@ -23,6 +23,10 @@ peso_bom = st.slider("Peso do Bom", -2.0, 2.0, 1.0, 0.1)
 peso_ruim = st.slider("Peso do Ruim", -2.0, 2.0, -1.0, 0.1)
 peso_neutro = st.slider("Peso do Neutro", -2.0, 2.0, 0.0, 0.1)
 
+st.subheader("Bias")
+
+bias = st.slider("Bias", -2.0, 2.0, 0.0, 0.1)
+
 st.write("Estado atual:")
 st.write({
     "inputs": {
@@ -34,5 +38,6 @@ st.write({
         "bom": peso_bom,
         "ruim": peso_ruim,
         "neutro": peso_neutro
-    }
+    },
+    "bias": bias
 })
