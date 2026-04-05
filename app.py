@@ -27,6 +27,18 @@ st.subheader("Bias")
 
 bias = st.slider("Bias", -2.0, 2.0, 0.0, 0.1)
 
+# --- CÁLCULO DA SOMA ---
+soma = (
+    int(bom) * peso_bom +
+    int(ruim) * peso_ruim +
+    int(neutro) * peso_neutro +
+    bias
+)
+
+st.subheader("Soma ponderada")
+
+st.write(soma)
+
 st.write("Estado atual:")
 st.write({
     "inputs": {
