@@ -102,7 +102,7 @@ with col2:
         # desenhar seta
         ax.annotate(
             "", 
-            xy=(0.58, 0.5), 
+            xy=(0.60, 0.5), 
             xytext=(x, y),
             arrowprops=dict(facecolor='blue', shrink=0.2, width=1)
         )
