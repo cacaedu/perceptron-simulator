@@ -75,7 +75,14 @@ with col2:
 
     fig, ax = plt.subplots()
     
-    ax.text(0.5, 0.5, "Neurônio", ha='center', va='center')
+    # desenhar círculo (neurônio)
+    circulo = plt.Circle((0.5, 0.5), 0.1, fill=False)
+    ax.add_patch(circulo)
+    
+    # símbolo Σ
+    ax.text(0.5, 0.5, "Σ", ha='center', va='center', fontsize=16)
+    
+    # limites e limpeza
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
