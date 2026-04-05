@@ -70,3 +70,14 @@ with col2:
 
     st.write("Soma:", soma)
     st.write("Saída:", saida)
+
+    import matplotlib.pyplot as plt
+
+    fig, ax = plt.subplots()
+    
+    ax.text(0.5, 0.5, "Neurônio", ha='center', va='center')
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.axis('off')
+    
+    st.pyplot(fig)
