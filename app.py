@@ -95,7 +95,7 @@ with col2:
             "", 
             xy=(0.5, 0.5), 
             xytext=(x, y),
-            arrowprops=dict(facecolor='blue', shrink=0.05, width=1)
+            arrowprops=dict(facecolor='blue', shrink=0.1, width=1)
         )
         ax.text(x - 0.05, y, label, ha='right', va='center')
     
