@@ -81,13 +81,6 @@ with col2:
     
     # símbolo Σ
     ax.text(0.5, 0.5, "Σ", ha='center', va='center', fontsize=16)
-    
-    # limites e limpeza
-    ax.set_xlim(0, 1)
-    ax.set_ylim(0, 1)
-    ax.axis('off')
-    
-    st.pyplot(fig)
 
     # coordenadas das entradas
     entradas = {
@@ -106,4 +99,11 @@ with col2:
         )
         ax.text(x - 0.05, y, label, ha='right', va='center')
     
+    # limites e limpeza
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.axis('off')
+    
     st.pyplot(fig)
+
+    
