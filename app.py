@@ -76,17 +76,20 @@ with col2:
     fig, ax = plt.subplots()
     
     # desenhar círculo (neurônio)
-    circulo = plt.Circle((0.63, 0.5), 0.1, fill=False)
+    dy = -0.05  # ajuste vertical
+
+    # círculo
+    circulo = plt.Circle((0.63, 0.5 + dy), 0.1, fill=False)
     ax.add_patch(circulo)
     
     # símbolo Σ
-    ax.text(0.63, 0.5, "Σ", ha='center', va='center', fontsize=16)
-
-    # coordenadas das entradas
+    ax.text(0.63, 0.5 + dy, "Σ", ha='center', va='center', fontsize=16)
+    
+    # coordenadas das entradas ajustadas
     entradas = {
-        "bom": (0.2, 0.7),
-        "ruim": (0.2, 0.5),
-        "neutro": (0.2, 0.3)
+        "bom": (0.2, 0.7 + dy),
+        "ruim": (0.2, 0.5 + dy),
+        "neutro": (0.2, 0.3 + dy)
     }
     
     # desenhar linhas (setas simplificadas)
@@ -102,14 +105,14 @@ with col2:
         # desenhar seta
         ax.annotate(
             "", 
-            xy=(0.60, 0.5), 
+            xy=(0.60, 0.5 + dy), 
             xytext=(x, y),
             arrowprops=dict(facecolor='blue', shrink=0.2, width=1)
         )
         
         # mostrar label e peso
-        ax.text(x + 0.05, y + 0.005, f"{label} ({peso:.1f})", ha='right', va='center', fontsize=12)
-    
+        ax.text(x + 0.05, y + 0.005 + dy, f"{label} ({peso:.1f})", ha='right', va='center', fontsize=12)   
+        
     # limites e limpeza
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
