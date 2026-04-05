@@ -76,7 +76,7 @@ with col2:
     fig, ax = plt.subplots()
     
     # desenhar círculo (neurônio)
-    circulo = plt.Circle((0.58, 0.5), 0.1, fill=False)
+    circulo = plt.Circle((0.6, 0.5), 0.1, fill=False)
     ax.add_patch(circulo)
     
     # símbolo Σ
