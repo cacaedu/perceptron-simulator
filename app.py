@@ -64,3 +64,9 @@ st.write({
     },
     "bias": bias
 })
+
+with col2:
+    st.subheader("Cálculo")
+
+    st.write("Soma:", soma)
+    st.write("Saída:", saida)
